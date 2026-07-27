@@ -1,14 +1,15 @@
 # london-2026
 
-Trip microsite for London, 5–10 August 2026.
+Trip microsite for London, 5-10 August 2026.
 
-A single self-contained HTML page — no build step, no dependencies. Open `index.html`
+A single self-contained HTML page - no build step, no dependencies. Open `index.html`
 in any browser, or serve it with GitHub Pages.
 
 ## Contents
 
-- Day-by-day itinerary, Thursday 6 – Monday 10 August
+- Day-by-day itinerary, Thursday 6 - Monday 10 August
 - Flight, hotel and theatre confirmations
+- Restaurant guide, built around a selective eater: jacket potato, chips, pizza, cacio e pepe
 - Venue reference with opening hours and step-free access notes
 - Cab-first transport guide with fare estimates
 - Pre-departure booking checklist
