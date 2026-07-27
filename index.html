@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>London &middot; Aug 5&ndash;10, 2026</title>
+<style>
+  :root{
+    --navy:#0b2540;
+    --navy-deep:#071a2e;
+    --gold:#c9a15e;
+    --gold-soft:#fbf3e4;
+    --cream:#f7f3ec;
+    --paper:#ffffff;
+    --line:#e4ddd0;
+    --line-soft:#efe9de;
+    --text:#22303f;
+    --muted:#6b7785;
+    --green:#2f6b45;
+    --green-bg:#eef4ee;
+    --amber:#8a5a12;
+    --amber-bg:#fdf4e3;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    line-height:1.55;
+  }
+  a{color:var(--navy);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%);
+    color:#fff;
+    padding:64px 24px 52px;
+    text-align:center;
+  }
+  .eyebrow{letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:var(--gold);margin-bottom:14px;}
+  h1{font-size:clamp(34px,7vw,58px);margin:0 0 8px;font-weight:600;letter-spacing:-0.015em;}
+  .dates{font-size:17px;color:#cdd8e3;margin-bottom:10px;}
+  .who{font-size:14px;color:#8fa2b5;margin-bottom:26px;}
+  .countdown{
+    display:inline-flex;gap:22px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:14px;padding:16px 26px;
+  }
+  .countdown div{text-align:center;}
+  .countdown .num{
+    font-size:26px;font-weight:700;color:#fff;line-height:1.1;
+    font-variant-numeric:tabular-nums;font-feature-settings:"tnum";
+    min-width:2ch;
+  }
+  @media(max-width:480px){
+    .countdown{gap:14px;padding:14px 16px;}
+    .countdown .num{font-size:22px;}
+  }
+  .countdown .label{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#a9b7c6;margin-top:3px;}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky;top:0;z-index:20;
+    background:rgba(247,243,236,.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    padding:10px 16px;
+    display:flex;gap:6px;justify-content:center;flex-wrap:wrap;
+  }
+  .nav a{
+    font-size:12px;font-weight:600;text-decoration:none;color:var(--navy);
+    padding:6px 13px;border-radius:999px;border:1px solid transparent;
+    white-space:nowrap;
+  }
+  .nav a:hover{background:#fff;border-color:var(--line);}
+
+  .wrap{max-width:940px;margin:0 auto;padding:0 20px 90px;}
+  .section{margin-top:52px;}
+  .section > h2{
+    font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);
+    margin:0 0 18px;display:flex;align-items:center;gap:12px;
+  }
+  .section > h2::after{content:"";flex:1;height:1px;background:var(--line);}
+
+  .card{
+    background:var(--paper);border:1px solid var(--line);border-radius:16px;
+    padding:26px 28px;box-shadow:0 1px 3px rgba(15,30,50,.04);
+  }
+  .card + .card{margin-top:16px;}
+
+  /* ---------- DAY CARDS ---------- */
+  .day{
+    background:var(--paper);border:1px solid var(--line);border-radius:18px;
+    overflow:hidden;margin-bottom:22px;box-shadow:0 1px 3px rgba(15,30,50,.04);
+  }
+  .day-head{
+    background:var(--navy);color:#fff;padding:20px 28px;
+    display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .day-head .dnum{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);}
+  .day-head .dtitle{font-size:22px;font-weight:600;margin-top:2px;}
+  .day-head .dtag{
+    font-size:11px;background:rgba(201,161,94,.18);color:var(--gold);
+    border:1px solid rgba(201,161,94,.4);padding:5px 12px;border-radius:999px;
+    letter-spacing:.05em;text-transform:uppercase;font-weight:600;
+  }
+  .day-body{padding:8px 28px 26px;}
+
+  .item{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line-soft);}
+  .item:last-child{border-bottom:none;}
+  .item .t{
+    flex:0 0 84px;font-size:13px;font-weight:700;color:var(--navy);
+    padding-top:2px;letter-spacing:.01em;
+  }
+  .item .t small{display:block;font-weight:500;color:var(--muted);font-size:11px;letter-spacing:0;}
+  .item .c{flex:1;min-width:0;}
+  .item .c .h{font-size:16px;font-weight:650;color:var(--text);margin-bottom:3px;}
+  .item .c .s{font-size:14px;color:var(--muted);}
+  .item .c .s strong{color:var(--text);font-weight:600;}
+
+  .move{
+    display:inline-flex;align-items:center;gap:7px;
+    background:var(--cream);border:1px solid var(--line);
+    font-size:12px;color:var(--muted);padding:5px 12px;border-radius:8px;
+    margin-top:8px;
+  }
+  .move b{color:var(--navy);font-weight:650;}
+
+  .flag{
+    background:var(--amber-bg);border:1px solid #f0dfbe;border-left:3px solid var(--gold);
+    border-radius:8px;padding:11px 15px;font-size:13px;color:var(--amber);margin-top:10px;
+  }
+  .flag b{color:#6b4409;}
+  .ok{
+    background:var(--green-bg);border:1px solid #d3e3d3;border-left:3px solid var(--green);
+    border-radius:8px;padding:11px 15px;font-size:13px;color:var(--green);margin-top:10px;
+  }
+  .ok b{color:#1f4d30;}
+
+  /* ---------- GENERIC ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px;}
+  .grid .label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:3px;}
+  .grid .value{font-size:15px;font-weight:650;color:var(--text);line-height:1.35;}
+
+  table{width:100%;border-collapse:collapse;font-size:14px;}
+  th{
+    text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.1em;
+    color:var(--muted);font-weight:700;padding:0 12px 10px 0;border-bottom:1px solid var(--line);
+  }
+  td{padding:12px 12px 12px 0;border-bottom:1px solid var(--line-soft);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  td.rt{text-align:right;padding-right:0;color:var(--muted);white-space:nowrap;}
+  .fare{font-weight:650;color:var(--navy);}
+
+  ul.clean{margin:8px 0 0;padding-left:18px;}
+  ul.clean li{margin-bottom:7px;font-size:14px;}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  .chip{
+    font-size:12.5px;background:var(--cream);border:1px solid var(--line);
+    padding:5px 13px;border-radius:999px;color:var(--text);
+  }
+
+  /* flights */
+  .fg{margin-bottom:24px;}
+  .fg:last-child{margin-bottom:0;}
+  .fg-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:8px;}
+  .leg{display:grid;grid-template-columns:1fr auto 1fr auto;align-items:center;gap:16px;padding:15px 0;border-top:1px solid var(--line-soft);}
+  .fg .leg:first-of-type{border-top:none;}
+  .leg .code{font-size:20px;font-weight:700;color:var(--navy);}
+  .leg .city{font-size:12.5px;color:var(--muted);}
+  .leg .time{font-size:14px;margin-top:2px;}
+  .leg .date{font-size:11.5px;color:var(--muted);}
+  .leg .arrow{color:var(--gold);font-size:17px;}
+  .leg .meta{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.45;}
+  .leg .meta .flt{color:var(--navy);font-weight:700;font-size:13.5px;}
+
+  /* checklist */
+  .todo{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--line-soft);align-items:flex-start;}
+  .todo:last-child{border-bottom:none;}
+  .todo .box{
+    flex:0 0 18px;height:18px;border:2px solid var(--gold);border-radius:5px;margin-top:2px;
+  }
+  .todo .txt{flex:1;}
+  .todo .txt .h{font-weight:650;font-size:15px;margin-bottom:2px;}
+  .todo .txt .s{font-size:13.5px;color:var(--muted);}
+
+  .footer{text-align:center;padding:36px 24px 70px;color:var(--muted);font-size:12.5px;line-height:1.8;}
+
+  @media(max-width:620px){
+    .item{flex-direction:column;gap:4px;}
+    .item .t{flex:none;}
+    .item .t small{display:inline;margin-left:6px;}
+    .leg{grid-template-columns:1fr auto 1fr;gap:10px;}
+    .leg .meta{grid-column:1 / -1;text-align:left;padding-top:4px;}
+    .day-body,.day-head{padding-left:20px;padding-right:20px;}
+    .card{padding:22px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="eyebrow">Itinerary</div>
+  <h1>London</h1>
+  <div class="dates">Wednesday, August 5 &ndash; Monday, August 10, 2026</div>
+  <div class="who">Jon Moore &nbsp;&middot;&nbsp; Kadi Miller</div>
+  <div class="countdown" id="countdown">
+    <div><div class="num" id="cd-days">–</div><div class="label">Days</div></div>
+    <div><div class="num" id="cd-hours">–</div><div class="label">Hours</div></div>
+    <div><div class="num" id="cd-mins">–</div><div class="label">Mins</div></div>
+    <div><div class="num" id="cd-secs">–</div><div class="label">Secs</div></div>
+  </div>
+</div>
+
+<div class="nav">
+  <a href="#pace">Pacing</a>
+  <a href="#thu">Thu 6</a>
+  <a href="#fri">Fri 7</a>
+  <a href="#sat">Sat 8</a>
+  <a href="#sun">Sun 9</a>
+  <a href="#mon">Mon 10</a>
+  <a href="#getting">Getting Around</a>
+  <a href="#venues">Venues</a>
+  <a href="#todo">To Book</a>
+  <a href="#logistics">Flights &amp; Hotel</a>
+</div>
+
+<div class="wrap">
+
+  <!-- ================= PACING ================= -->
+  <div class="section" id="pace" style="margin-top:44px;">
+    <h2>How this trip is paced</h2>
+    <div class="card">
+      <p style="margin-top:0;font-size:15px;">
+        Kadi is recovering from surgery, so this plan is built around <b>one anchor per day</b>, door-to-door black cabs
+        instead of walking, and a standing option to bail out and go back to the room. Everything is sequenced so the
+        heaviest days sit in the middle, with a soft landing on arrival and an easy final morning.
+      </p>
+      <div class="ok">
+        <b>The single luckiest thing about this trip:</b> Sea Containers is a 4-minute stroll &mdash; or a
+        £8 minimum-fare cab &mdash; from Tate Modern's front door. The biggest art day requires almost no travel,
+        and you can retreat to the room between exhibitions.
+      </div>
+      <div class="ok">
+        <b>And your Tate membership removes most of the pressure from Friday.</b> Unlimited free entry to every
+        exhibition, no booking, no timed slots &mdash; just walk in with the card. That means Friday isn't a
+        schedule to keep, it's a menu. See one exhibition, go lie down, come back for another. Walk out of
+        something halfway through and return Saturday evening. Nothing is forfeited, because nothing was paid
+        for at the door.
+      </div>
+      <div class="chips">
+        <span class="chip">Cabs over walking, always</span>
+        <span class="chip">One anchor per day</span>
+        <span class="chip">Built-in rest blocks</span>
+        <span class="chip">Tate is drop-in &mdash; no bookings to miss</span>
+        <span class="chip">Nothing before 10am except Margate &amp; the flight home</span>
+        <span class="chip">Every venue checked for step-free access</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= THURSDAY ================= -->
+  <div class="section" id="thu">
+    <h2>The Itinerary</h2>
+
+    <div class="day">
+      <div class="day-head">
+        <div>
+          <div class="dnum">Day One &middot; Thursday, August 6</div>
+          <div class="dtitle">Land &amp; Recover</div>
+        </div>
+        <div class="dtag">Rest Day</div>
+      </div>
+      <div class="day-body">
+
+        <div class="item">
+          <div class="t">8:30 AM<small>London</small></div>
+          <div class="c">
+            <div class="h">Land at Heathrow &mdash; UA 920, Terminal 2</div>
+            <div class="s">
+              Immigration and baggage at T2 typically runs <strong>45&ndash;75 minutes</strong>. Don't rush it.
+              If the walk from the gate to immigration looks long, ask a United agent at the jet bridge for
+              <strong>wheelchair or buggy assistance</strong> &mdash; it's free, and at Heathrow it's genuinely
+              faster than walking it.
+            </div>
+            <div class="flag">
+              <b>Request assistance now, not at the gate.</b> Add it to the booking through United (or call
+              1-800-228-2744) at least 48 hours out so it's waiting at the aircraft door.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">10:00 AM</div>
+          <div class="c">
+            <div class="h">Black cab to Sea Containers</div>
+            <div class="s">
+              From the T2 taxi rank &mdash; <strong>45&ndash;70 minutes</strong>, roughly <strong>£75&ndash;100</strong>.
+              Worth every penny over the Heathrow Express + transfer, which involves stairs, escalators and
+              a change at Paddington.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">11:00 AM</div>
+          <div class="c">
+            <div class="h">Check in &mdash; room is already waiting</div>
+            <div class="s">
+              Magdalena in Reservations has <strong>pre-registered the room from Wednesday night</strong>, so it's
+              yours the moment you walk in. No lobby-sitting, no 3pm wait. Give her name at the desk.
+            </div>
+            <div class="ok">
+              <b>Confirmed in writing, July 27.</b> You also have a $100 on-property credit and complimentary
+              breakfast for two every morning &mdash; and Jon's asked about a river-facing room.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">11:30 AM<small>onward</small></div>
+          <div class="c">
+            <div class="h">Sleep. Genuinely.</div>
+            <div class="s">
+              A 2&ndash;3 hour nap now is the difference between a good Friday and a miserable one. Set an alarm
+              for <strong>2:30pm</strong> so it doesn't wreck the night.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">3:00 PM</div>
+          <div class="c">
+            <div class="h">Optional: Turbine Hall &amp; the Members Bar</div>
+            <div class="s">
+              If you're upright and curious, Tate Modern is four minutes away and your card gets you in the door
+              with zero commitment. Wander the Turbine Hall, then go sit in the <strong>Members Bar on Level 5</strong>
+              with a drink. Benches everywhere, and you can turn around and leave after ten minutes having lost
+              nothing. A gentle way to reset the body clock.
+            </div>
+            <div class="move">Thursdays: gallery closes <b>6:00 PM</b>, Members Bar <b>6:00 PM</b></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">7:00 PM</div>
+          <div class="c">
+            <div class="h">Early dinner in the building</div>
+            <div class="s">
+              Don't go looking for a restaurant tonight. <strong>Sea Containers Restaurant</strong> is downstairs, and
+              <strong>Lyaness</strong> (the bar on the ground floor) does excellent food. Put it on the $100 credit.
+              Bed by 9:30 &mdash; you'll be asleep before your head lands.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= FRIDAY ================= -->
+    <div class="day" id="fri">
+      <div class="day-head">
+        <div>
+          <div class="dnum">Day Two &middot; Friday, August 7</div>
+          <div class="dtitle">Tate Modern, then Broadway on Whitehall</div>
+        </div>
+        <div class="dtag">Big Day</div>
+      </div>
+      <div class="day-body">
+
+        <div class="item">
+          <div class="t">9:00 AM</div>
+          <div class="c">
+            <div class="h">Breakfast at the hotel &mdash; complimentary</div>
+            <div class="s">Eat properly. There is a lot of standing ahead, and Tate's cafés get slammed by noon.</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">10:00 AM<small>2 hrs</small></div>
+          <div class="c">
+            <div class="h">Frida: The Making of an Icon</div>
+            <div class="s">
+              130 works plus documents, photographs and personal effects from her archives &mdash; the blockbuster
+              of the year, and by far the busiest thing you'll see this week. <strong>Go at opening.</strong>
+              Members walk straight in with no booking, so being there at 10:00 sharp means seeing it before
+              the general-admission crowd builds.
+            </div>
+            <div class="flag">
+              <b>Ask for a gallery stool at the entrance desk.</b> Tate lends lightweight folding stools free of
+              charge &mdash; it turns a hard 90-minute exhibition into a comfortable one. Most people don't know
+              they exist. Also check tate.org.uk for <b>Members Hours</b> on Frida: Tate often runs early
+              openings for Members before the doors open to everyone, which would be the quietest possible visit.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">12:00 PM</div>
+          <div class="c">
+            <div class="h">The Members Bar &mdash; Level 5, Natalie Bell Building</div>
+            <div class="s">
+              This is your rest hub all day, and it's the best thing your membership buys on a trip like this.
+              Quiet, seated, table service, and reached <strong>by lift from Level 4</strong>. Open
+              <strong>10:00&ndash;21:00 on Fridays</strong>, so it's there whenever you need to stop.
+              Have lunch here rather than fighting for a table in the public cafés.
+            </div>
+            <div class="move">Alternative: the hotel room is <b>4 minutes away</b> if you'd rather lie flat</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">1:45 PM<small>75 min</small></div>
+          <div class="c">
+            <div class="h">Tracey Emin: A Second Life</div>
+            <div class="s">
+              Her largest exhibition ever &mdash; 90+ works across 40 years, including <strong>My Bed</strong> and
+              <strong>Exorcism of the Last Painting I Ever Made</strong>. It charts her childhood in Margate through
+              her illness and recovery, which lands differently the day before you go to Margate to see the studios
+              she built there.
+            </div>
+            <div class="flag"><b>Closes August 30.</b> This is your only window &mdash; it won't tour.</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">3:15 PM<small>60 min</small></div>
+          <div class="c">
+            <div class="h">Ana Mendieta</div>
+            <div class="s">
+              <strong>Blavatnik Building, Level 2.</strong> Her biggest UK show ever &mdash; 120+ works, the
+              <em>Silueta</em> series, newly remastered films, early paintings and late sculpture, much of it
+              never shown in Britain. There's a tree sculpture from 1982 installed outside the building.
+            </div>
+            <div class="move">
+              Running low? <b>Walk out and come back.</b> Membership means you can return Saturday evening
+              (Tate is open late) or Sunday morning at no cost &mdash; and it runs to January 2027 regardless.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">4:30 PM</div>
+          <div class="c">
+            <div class="h">Back to the room. Feet up. Non-negotiable.</div>
+            <div class="s">Two hours horizontal before the theatre. This is the block that makes the evening possible.</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">6:30 PM</div>
+          <div class="c">
+            <div class="h">Cab to Trafalgar Theatre</div>
+            <div class="s">
+              14 Whitehall, SW1A 2DY &mdash; <strong>12&ndash;18 minutes, £13&ndash;18.</strong> Arriving at
+              <strong>6:50</strong> for a 7:30 curtain gives you forty unhurried minutes to get up to the
+              Dress Circle without a queue behind you. Ask the doorman at Sea Containers to have the cab waiting.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">7:30 PM</div>
+          <div class="c">
+            <div class="h">Oh, Mary!</div>
+            <div class="s">
+              <strong>Dress Circle, Row J, seats 1 &amp; 2.</strong> Order 40782078, eTickets are the PDF attached
+              to your ATG confirmation email. Roughly 80 minutes, no interval (worth confirming on the show page).
+            </div>
+            <div class="flag">
+              <b>Call ATG Access before you fly: 0800 912 6971.</b> The Dress Circle has <b>no step-free access</b> &mdash;
+              it's 14 to 25 stairs from the foyer depending on which entrance you're sent to, plus 3 steps between
+              rows. Row J is mid-circle. The lift only serves the Stalls. Ask them to move you down to the Stalls;
+              ATG does this routinely for access needs and it's the single highest-value phone call on this list.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">9:00 PM</div>
+          <div class="c">
+            <div class="h">Cab home</div>
+            <div class="s">
+              Whitehall is thick with black cabs at curtain-down. If it's raining, walk one block to
+              <strong>Trafalgar Square</strong> and you'll have one in thirty seconds.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= SATURDAY ================= -->
+    <div class="day" id="sat">
+      <div class="day-head">
+        <div>
+          <div class="dnum">Day Three &middot; Saturday, August 8</div>
+          <div class="dtitle">Margate &mdash; TEARS at TKE Studios</div>
+        </div>
+        <div class="dtag">Day Trip</div>
+      </div>
+      <div class="day-body">
+
+        <div class="ok" style="margin:14px 0 4px;">
+          <b>Saturday is the right day, and it's slightly lucky that it is.</b> TKE Studios opens to the public
+          <b>only on Saturdays and Sundays, 12&ndash;5 PM</b>, and only while an exhibition is running. The
+          <b>TEARS Final Show</b> runs June 28 &ndash; August 31, so August 8 lands squarely inside it.
+        </div>
+
+        <div class="item">
+          <div class="t">8:45 AM</div>
+          <div class="c">
+            <div class="h">Breakfast, then cab to St Pancras International</div>
+            <div class="s">
+              <strong>18&ndash;25 minutes, £18&ndash;25.</strong> Leave the hotel by <strong>9:20</strong>.
+              St Pancras is <strong>fully step-free (Category A)</strong> with accessible toilets on the circle
+              concourse &mdash; the easiest big station in London.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">10:00 AM<small>approx</small></div>
+          <div class="c">
+            <div class="h">Southeastern Highspeed to Margate</div>
+            <div class="s">
+              Roughly <strong>1 hr 25 min to 1 hr 45 min</strong> via HS1. Book a specific train in advance for a
+              cheaper fare and a reserved seat &mdash; do not wing it on a summer Saturday to a seaside town.
+              Target something departing <strong>10:00&ndash;10:30</strong> to land comfortably before the noon opening.
+            </div>
+            <div class="flag">
+              <b>Book Passenger Assist if you want help boarding</b> &mdash; free, via Southeastern or National Rail,
+              ideally 2+ hours ahead. They'll meet you at the platform and see you onto the train at both ends.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">11:35 AM</div>
+          <div class="c">
+            <div class="h">Arrive Margate &mdash; taxi to the studios</div>
+            <div class="s">
+              TKE Studios is at <strong>99 Victoria Road, CT9 1RD</strong>, roughly ¾ mile from the station and
+              uphill from the seafront. There's a rank outside the station; it's a <strong>5-minute, £6&ndash;9</strong>
+              ride. Don't walk this one.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">12:00 PM<small>90 min</small></div>
+          <div class="c">
+            <div class="h">TEARS Final Show &mdash; TKE Studios</div>
+            <div class="s">
+              The culminating exhibition of the Tracey Emin Artist Residency. Free entry, warm-white lighting,
+              two floors. Coming here the day after her Tate retrospective is a genuinely good piece of
+              trip design &mdash; the Tate show ends with Margate, and this is what Margate became.
+            </div>
+            <div class="ok">
+              <b>Fully accessible, but ask on arrival.</b> The front entrance has steps. There's a
+              <b>separate accessible entrance through the gates on the left side</b> leading straight to a lift
+              serving both floors and the basement. Tell the invigilator when you arrive and they'll walk you
+              round. Accessible toilet has grab rails and emergency cords.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">1:45 PM</div>
+          <div class="c">
+            <div class="h">Lunch by the harbour</div>
+            <div class="s">
+              Taxi down to the Old Town &mdash; <strong>Angela's</strong> and <strong>Sargasso</strong> on the harbour
+              are the standouts, both small, both worth booking ahead for a summer Saturday.
+            </div>
+            <div class="flag">
+              <b>Margate Old Town is cobbled and sloped.</b> Take a cab between the studios, lunch and the station
+              rather than linking them on foot &mdash; it's short distances but genuinely uneven ground.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">3:15 PM</div>
+          <div class="c">
+            <div class="h">Optional: Turner Contemporary</div>
+            <div class="s">
+              Free, purpose-built, entirely step-free, and a two-minute taxi from the station &mdash; the easiest
+              gallery you'll visit all week. Only if energy allows; the sea view from the café alone justifies it.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">5:00 PM<small>approx</small></div>
+          <div class="c">
+            <div class="h">Train back to St Pancras</div>
+            <div class="s">
+              Home around <strong>6:30&ndash;7:00 PM</strong>, then a cab to the hotel. Book dinner in the building
+              tonight &mdash; after a day trip you will not want to go out again.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= SUNDAY ================= -->
+    <div class="day" id="sun">
+      <div class="day-head">
+        <div>
+          <div class="dnum">Day Four &middot; Sunday, August 9</div>
+          <div class="dtitle">Freud in Hampstead, Cecily Brown in Kensington</div>
+        </div>
+        <div class="dtag">Easy Pace</div>
+      </div>
+      <div class="day-body">
+
+        <div class="ok" style="margin:14px 0 4px;">
+          <b>Why these two landed on Sunday.</b> Friday was already Tate-plus-theatre, and stacking Serpentine on
+          top of it would have meant crossing London twice in one day. Freud (Hampstead) and Serpentine
+          (Kensington Gardens) sit on the same northwest axis, about 20 minutes apart, and both are open Sundays.
+          It makes for a genuinely relaxed final full day.
+        </div>
+
+        <div class="item">
+          <div class="t">10:30 AM</div>
+          <div class="c">
+            <div class="h">Cab to the Freud Museum</div>
+            <div class="s">
+              20 Maresfield Gardens, NW3 5SX &mdash; <strong>30&ndash;40 minutes, £32&ndash;42.</strong>
+              A long ride, but a beautiful one up through Regent's Park and Hampstead.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">11:15 AM<small>75 min</small></div>
+          <div class="c">
+            <div class="h">Freud Museum London</div>
+            <div class="s">
+              The house Freud fled to from Vienna in 1938 and died in a year later &mdash; his library, his
+              antiquities, and <strong>the couch</strong>, all exactly as he left them. Anna Freud's rooms are
+              upstairs. Open Wed&ndash;Sun, 10:30 AM &ndash; 5:00 PM.
+            </div>
+            <div class="ok">
+              <b>Book a free Disabled Companion ticket.</b> The museum offers one alongside a standard ticket.
+              Ground floor is wheelchair accessible; if the first floor is too much, <b>ask for the exhibition
+              handout</b> &mdash; they produce one specifically for visitors who can't manage the stairs. Access
+              questions: <b>+44 20 7435 2002</b>.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">12:45 PM</div>
+          <div class="c">
+            <div class="h">Lunch in Hampstead</div>
+            <div class="s">
+              The village is five minutes away by cab and full of good, unhurried Sunday lunch. Or hold out and
+              eat at <strong>The Magazine</strong> beside Serpentine North.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">2:30 PM<small>75 min</small></div>
+          <div class="c">
+            <div class="h">Cecily Brown: Picture Making &mdash; Serpentine South</div>
+            <div class="s">
+              <strong>Free entry, no booking.</strong> Kensington Gardens, W2 3XA. Her first major solo painting
+              show at a UK institution since Modern Art Oxford in 2005 &mdash; new and recent work made in response
+              to the gallery's setting in the park, plus monotypes and drawings. Open Sundays 10 AM&ndash;7 PM.
+            </div>
+            <div class="flag">
+              <b>Have the cab drop you as close to the gallery door as it can get.</b> Serpentine South sits inside
+              Kensington Gardens, and the default drop-off can leave you with a long path walk. Ask for
+              <b>West Carriage Drive</b>, the closest vehicle access.
+            </div>
+            <div class="move">
+              Swapped Ana Mendieta out of Friday? <b>Do it this morning instead</b> and make Serpentine the afternoon.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">4:30 PM</div>
+          <div class="c">
+            <div class="h">Back to the hotel &mdash; and pack tonight</div>
+            <div class="s">
+              <strong>25&ndash;35 minutes, £24&ndash;32.</strong> Monday morning is very early; anything you can
+              close tonight is a gift to tomorrow.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">7:30 PM</div>
+          <div class="c">
+            <div class="h">Last dinner</div>
+            <div class="s">
+              Spend down whatever's left of the $100 credit. If you never made it to <strong>Lyaness</strong>,
+              this is the night &mdash; it's one of the best bars in the world and it's in your lobby.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= MONDAY ================= -->
+    <div class="day" id="mon">
+      <div class="day-head">
+        <div>
+          <div class="dnum">Day Five &middot; Monday, August 10</div>
+          <div class="dtitle">Home</div>
+        </div>
+        <div class="dtag">Early Start</div>
+      </div>
+      <div class="day-body">
+
+        <div class="flag" style="margin:14px 0 4px;">
+          <b>Read this one twice.</b> Your flight leaves Heathrow at <b>11:05 AM</b>, but the hotel's stated
+          checkout is noon &mdash; the two numbers have nothing to do with each other. You need to be
+          <b>out the door by 6:45 AM</b>. Arrange the car and an early checkout with the front desk on Sunday evening.
+        </div>
+
+        <div class="item">
+          <div class="t">6:00 AM</div>
+          <div class="c">
+            <div class="h">Up, and settle the bill the night before if you can</div>
+            <div class="s">
+              Hotel breakfast typically doesn't start until 7 &mdash; ask reception on Sunday for
+              <strong>grab-and-go coffee and pastries</strong> for the morning. They'll sort it.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">6:45 AM</div>
+          <div class="c">
+            <div class="h">Car to Heathrow Terminal 2</div>
+            <div class="s">
+              <strong>45&ndash;70 minutes.</strong> Pre-book through the hotel rather than hailing at dawn &mdash;
+              it's marginally more expensive and enormously less stressful. United departs from
+              <strong>Terminal 2, the Queen's Terminal</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">8:00 AM</div>
+          <div class="c">
+            <div class="h">At the airport &mdash; three hours before departure</div>
+            <div class="s">
+              Bags must be checked <strong>at least 60 minutes</strong> before departure and you must be at the gate
+              <strong>30 minutes</strong> before. Request assistance again for the T2 walk &mdash; it is a long terminal.
+              Two free checked bags each on Jon's Premier Silver status.
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">11:05 AM</div>
+          <div class="c">
+            <div class="h">UA 959 &mdash; London to Chicago</div>
+            <div class="s">Seats 34D and 34E. Lands O'Hare <strong>2:10 PM</strong>. Clear US immigration and customs at ORD.</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="t">3:35 PM</div>
+          <div class="c">
+            <div class="h">UA 5985 &mdash; Chicago to Indianapolis</div>
+            <div class="s">
+              Seats 11A and 11B. Home at <strong>5:52 PM</strong>. Only 85 minutes between landing and departing at
+              ORD with immigration in between &mdash; if it's tight, don't sprint. There are later Indy flights and
+              United will rebook you.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= GETTING AROUND ================= -->
+  <div class="section" id="getting">
+    <h2>Getting Around</h2>
+    <div class="card">
+      <p style="margin-top:0;font-size:15px;">
+        <b>Default to black cabs.</b> Every London black cab is legally required to be wheelchair accessible &mdash;
+        they have a low step-in, a swing-out ramp, and grab rails, which makes them far kinder than an Uber even
+        when a chair isn't involved. Hail on the street, or use the <b>Gett</b> app to book one. The hotel doorman
+        will have one waiting if you ask ten minutes ahead.
+      </p>
+      <p style="font-size:15px;">
+        <b>The Tube is the fallback, not the plan.</b> Most central stations mean long tunnels, escalators and
+        stairs. The one exception worth knowing: <b>Blackfriars</b>, a few minutes from the hotel, is fully
+        step-free and useful if a cab is nowhere to be found.
+      </p>
+
+      <table style="margin-top:22px;">
+        <thead>
+          <tr><th>From Sea Containers to</th><th>By cab</th><th class="rt">Rough fare</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Tate Modern</td><td>3&ndash;5 min <span style="color:#6b7785">(or a 4-min riverside walk)</span></td><td class="rt fare">£8&ndash;10</td></tr>
+          <tr><td>Trafalgar Theatre, Whitehall</td><td>12&ndash;18 min</td><td class="rt fare">£13&ndash;18</td></tr>
+          <tr><td>St Pancras International</td><td>18&ndash;25 min</td><td class="rt fare">£18&ndash;25</td></tr>
+          <tr><td>Serpentine South, Kensington Gardens</td><td>25&ndash;35 min</td><td class="rt fare">£24&ndash;32</td></tr>
+          <tr><td>Freud Museum, Hampstead</td><td>30&ndash;40 min</td><td class="rt fare">£32&ndash;42</td></tr>
+          <tr><td>Heathrow Terminal 2</td><td>45&ndash;70 min</td><td class="rt fare">£75&ndash;100</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:12.5px;color:var(--muted);margin-bottom:0;margin-top:14px;">
+        Fares are estimates for 2026 and climb in heavy traffic. Cabs take contactless.
+      </p>
+    </div>
+  </div>
+
+  <!-- ================= VENUES ================= -->
+  <div class="section" id="venues">
+    <h2>Venue Reference</h2>
+
+    <div class="card">
+      <div style="font-size:19px;font-weight:700;color:var(--navy);">Tate Modern</div>
+      <div style="color:var(--muted);font-size:14px;margin-bottom:16px;">Bankside, SE1 9TG &nbsp;&middot;&nbsp; 020 7887 8888 &nbsp;&middot;&nbsp; 4 min from the hotel</div>
+      <div class="grid">
+        <div><div class="label">Hours</div><div class="value">Sun&ndash;Thu 10&ndash;18<br>Fri&ndash;Sat late opening</div></div>
+        <div><div class="label">Frida Kahlo</div><div class="value">To Jan 3, 2027<br><span style="font-weight:400;color:var(--muted);font-size:13px;">Free &middot; no booking</span></div></div>
+        <div><div class="label">Tracey Emin</div><div class="value">To Aug 30, 2026<br><span style="font-weight:400;color:var(--muted);font-size:13px;">Free &middot; no booking</span></div></div>
+        <div><div class="label">Ana Mendieta</div><div class="value">To Jan 17, 2027<br><span style="font-weight:400;color:var(--muted);font-size:13px;">Blavatnik, Level 2</span></div></div>
+      </div>
+      <div class="ok">
+        <b>You're Members &mdash; just show the card.</b> Unlimited free entry to all three exhibitions plus the
+        collection displays, no booking and no timed slots, as many times as you like across the week.
+        Also worth knowing: 10% off in the shop, and the same card works at Tate Britain if you find yourself
+        with a spare afternoon.
+      </div>
+      <div class="ok">
+        <b>Members Bar &mdash; Level 5, Natalie Bell Building.</b> Reached by lift from Level 4.
+        Mon&ndash;Thu 10:00&ndash;18:00, Fri&ndash;Sat 10:00&ndash;21:00, Sun 10:00&ndash;20:00. The best
+        sit-down-and-recover spot on the South Bank that isn't your hotel room.
+      </div>
+      <div class="ok">
+        <b>Fully step-free throughout</b> &mdash; lifts to every floor, accessible toilets on each level,
+        and free lightweight gallery stools on request at the exhibition entrances.
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-size:19px;font-weight:700;color:var(--navy);">Trafalgar Theatre</div>
+      <div style="color:var(--muted);font-size:14px;margin-bottom:16px;">14 Whitehall, SW1A 2DY &nbsp;&middot;&nbsp; Access line 0800 912 6971</div>
+      <div class="grid">
+        <div><div class="label">Show</div><div class="value">Oh, Mary!</div></div>
+        <div><div class="label">When</div><div class="value">Fri Aug 7 &middot; 7:30 PM</div></div>
+        <div><div class="label">Seats</div><div class="value">Dress Circle J1 &amp; J2</div></div>
+        <div><div class="label">Order</div><div class="value">40782078</div></div>
+      </div>
+      <div class="flag">
+        <b>No step-free access to the Dress Circle.</b> 14&ndash;25 stairs from the foyer, plus 3 steps between rows.
+        The lift only reaches the Stalls. Call the access line and ask to be moved down. Also note: no suitcases
+        admitted, and the cloakroom takes small bags and coats only.
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-size:19px;font-weight:700;color:var(--navy);">TKE Studios &mdash; Tracey Emin Foundation</div>
+      <div style="color:var(--muted);font-size:14px;margin-bottom:16px;">99 Victoria Road, Margate, CT9 1RD &nbsp;&middot;&nbsp; ///glass.flops.spicy</div>
+      <div class="grid">
+        <div><div class="label">Exhibition</div><div class="value">TEARS Final Show</div></div>
+        <div><div class="label">Runs</div><div class="value">Jun 28 &ndash; Aug 31</div></div>
+        <div><div class="label">Open to public</div><div class="value">Sat &amp; Sun only<br><span style="font-weight:400;color:var(--muted);font-size:13px;">12:00 &ndash; 17:00</span></div></div>
+        <div><div class="label">Entry</div><div class="value">Free</div></div>
+      </div>
+      <div class="ok">
+        <b>Accessible entrance is through the gates on the left side</b> of the building &mdash; it leads directly to
+        a lift serving both floors and the basement. Ask the invigilator. Ramps at all thresholds.
+        Warm-white lighting; bring sunglasses if light sensitivity is an issue. Photography allowed, no flash.
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-size:19px;font-weight:700;color:var(--navy);">Serpentine South</div>
+      <div style="color:var(--muted);font-size:14px;margin-bottom:16px;">Kensington Gardens, W2 3XA</div>
+      <div class="grid">
+        <div><div class="label">Exhibition</div><div class="value">Cecily Brown:<br>Picture Making</div></div>
+        <div><div class="label">Runs</div><div class="value">To Sep 6, 2026</div></div>
+        <div><div class="label">Sunday hours</div><div class="value">10:00 &ndash; 19:00</div></div>
+        <div><div class="label">Entry</div><div class="value">Free &middot; no booking</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-size:19px;font-weight:700;color:var(--navy);">Freud Museum London</div>
+      <div style="color:var(--muted);font-size:14px;margin-bottom:16px;">20 Maresfield Gardens, NW3 5SX &nbsp;&middot;&nbsp; +44 20 7435 2002</div>
+      <div class="grid">
+        <div><div class="label">Hours</div><div class="value">Wed &ndash; Sun<br>10:30 &ndash; 17:00</div></div>
+        <div><div class="label">Closed</div><div class="value">Mon &amp; Tue</div></div>
+        <div><div class="label">Booking</div><div class="value">Advance advised</div></div>
+        <div><div class="label">Access</div><div class="value">Free companion ticket</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= TO BOOK ================= -->
+  <div class="section" id="todo">
+    <h2>Before You Fly</h2>
+    <div class="card">
+
+      <div class="todo">
+        <div class="box"></div>
+        <div class="txt">
+          <div class="h">Call ATG Access about the Dress Circle seats &mdash; 0800 912 6971</div>
+          <div class="s">Highest-value call on this list. Row J means up to 25 stairs with no lift. Ask to move to the Stalls.</div>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="box"></div>
+        <div class="txt">
+          <div class="h">Pack the Tate Membership cards</div>
+          <div class="s">Nothing to book &mdash; but the cards are the whole benefit, so don't leave them at home. Check tate.org.uk for Members Hours on Frida while you're at it; an early opening would be the quietest way to see it.</div>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="box"></div>
+        <div class="txt">
+          <div class="h">Add wheelchair/buggy assistance to both United bookings</div>
+          <div class="s">Confirmation DEYV8D. At least 48 hours ahead so it's waiting at the aircraft door at Heathrow and O'Hare.</div>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="box"></div>
+        <div class="txt">
+          <div class="h">Book Saturday's Margate trains, both directions</div>
+          <div class="s">Southeastern Highspeed from St Pancras. Advance fares are far cheaper and get you a reserved seat. Add free Passenger Assist if you'd like help boarding.</div>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="box"></div>
+        <div class="txt">
+          <div class="h">Reserve Freud Museum tickets for Sunday</div>
+          <div class="s">Book the free Disabled Companion ticket alongside the standard one.</div>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="box"></div>
+        <div class="txt">
+          <div class="h">Book Saturday lunch in Margate Old Town</div>
+          <div class="s">Angela's or Sargasso. Small rooms, summer Saturday &mdash; walk-ins are optimistic.</div>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="box"></div>
+        <div class="txt">
+          <div class="h">Arrange Monday's 6:45 AM car and early checkout</div>
+          <div class="s">Sort it with the front desk on Sunday evening, along with grab-and-go breakfast.</div>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="box"></div>
+        <div class="txt">
+          <div class="h">Download the ATG eTickets to your phone</div>
+          <div class="s">The PDF is attached to order confirmation 40782078. Save it offline &mdash; don't rely on airport wifi and roaming.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= LOGISTICS ================= -->
+  <div class="section" id="logistics">
+    <h2>Flights &amp; Hotel</h2>
+
+    <div class="card">
+      <div style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">United &middot; Confirmation DEYV8D</div>
+
+      <div class="fg" style="margin-top:18px;">
+        <div class="fg-label">Outbound &mdash; Wednesday, August 5</div>
+        <div class="leg">
+          <div><div class="code">IND</div><div class="city">Indianapolis</div><div class="time">4:25 PM</div><div class="date">Wed, Aug 5</div></div>
+          <div class="arrow">&#9992;</div>
+          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">4:48 PM</div><div class="date">Wed, Aug 5</div></div>
+          <div class="meta"><div class="flt">UA 2680</div>Seats 23C &amp; 23B</div>
+        </div>
+        <div class="leg">
+          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">6:15 PM</div><div class="date">Wed, Aug 5</div></div>
+          <div class="arrow">&#9992;</div>
+          <div><div class="code">LHR</div><div class="city">London Heathrow</div><div class="time">8:30 AM</div><div class="date">Thu, Aug 6</div></div>
+          <div class="meta"><div class="flt">UA 920</div>Seats 33D &amp; 33E<br>Overnight</div>
+        </div>
+      </div>
+
+      <div class="fg">
+        <div class="fg-label">Return &mdash; Monday, August 10</div>
+        <div class="leg">
+          <div><div class="code">LHR</div><div class="city">London Heathrow</div><div class="time">11:05 AM</div><div class="date">Mon, Aug 10</div></div>
+          <div class="arrow">&#9992;</div>
+          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">2:10 PM</div><div class="date">Mon, Aug 10</div></div>
+          <div class="meta"><div class="flt">UA 959</div>Seats 34D &amp; 34E</div>
+        </div>
+        <div class="leg">
+          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">3:35 PM</div><div class="date">Mon, Aug 10</div></div>
+          <div class="arrow">&#9992;</div>
+          <div><div class="code">IND</div><div class="city">Indianapolis</div><div class="time">5:52 PM</div><div class="date">Mon, Aug 10</div></div>
+          <div class="meta"><div class="flt">UA 5985</div>Seats 11A &amp; 11B</div>
+        </div>
+      </div>
+
+      <div class="chips">
+        <span class="chip">Two free checked bags each &mdash; Premier Silver</span>
+        <span class="chip">70 lbs / 32 kg per bag</span>
+        <span class="chip">Heathrow Terminal 2</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-size:20px;font-weight:700;color:var(--navy);">Sea Containers London</div>
+      <div style="color:var(--muted);font-size:14px;margin-bottom:18px;">20 Upper Ground, SE1 9PD &nbsp;&middot;&nbsp; +44 20 3747 1000</div>
+
+      <div class="ok" style="margin-top:0;">
+        <b>Early check-in confirmed for Thursday, August 6.</b> Because the overnight flight lands the morning
+        after the booked check-in date, Magdalena in Reservations pre-registered the room from the night before.
+        It'll be ready when you arrive. Reservation dates on file still read Aug 5&ndash;10, five nights.
+      </div>
+
+      <div class="grid" style="margin-top:20px;">
+        <div><div class="label">Actual arrival</div><div class="value">Thu, Aug 6 &middot; morning</div></div>
+        <div><div class="label">Check-out</div><div class="value">Mon, Aug 10 &middot; 12:00 PM</div></div>
+        <div><div class="label">Room</div><div class="value">Standard, 1 Queen</div></div>
+        <div><div class="label">Confirmation</div><div class="value">9101804558766</div></div>
+      </div>
+
+      <div class="chips">
+        <span class="chip">Complimentary breakfast for two, daily</span>
+        <span class="chip">$100 on-property credit</span>
+        <span class="chip">Room upgrade if available</span>
+        <span class="chip">Thames-facing room requested</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Amex Travel #ZO-AX1059-61689 &nbsp;&middot;&nbsp; United DEYV8D &nbsp;&middot;&nbsp; Hotel 9101804558766 &nbsp;&middot;&nbsp; ATG 40782078<br>
+    Exhibition dates, opening hours and fares verified July 27, 2026. Train times are indicative &mdash; confirm when booking.
+  </div>
+
+</div>
+
+<script>
+  const tripStart = new Date("2026-08-05T16:25:00-04:00");
+  function updateCountdown(){
+    const now = new Date();
+    const diff = tripStart - now;
+    const el = document.getElementById('countdown');
+    if(diff <= 0){
+      el.innerHTML = '<div style="font-size:17px;font-weight:600;padding:4px 8px;">Safe travels &mdash; have a wonderful trip.</div>';
+      return;
+    }
+    const pad = n => String(n).padStart(2, '0');
+    document.getElementById('cd-days').textContent  = Math.floor(diff / 86400000);
+    document.getElementById('cd-hours').textContent = pad(Math.floor((diff / 3600000) % 24));
+    document.getElementById('cd-mins').textContent  = pad(Math.floor((diff / 60000) % 60));
+    document.getElementById('cd-secs').textContent  = pad(Math.floor((diff / 1000) % 60));
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
