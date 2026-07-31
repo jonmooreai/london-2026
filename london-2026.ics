@@ -1,0 +1,402 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//jonmooreai//London 2026 Trip//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:London 2026
+X-WR-TIMEZONE:Europe/London
+BEGIN:VTIMEZONE
+TZID:Europe/London
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+DTSTART:19810329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19961027T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20070311T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20071104T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Indiana/Indianapolis
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20070311T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20071104T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:london2026-01@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=America/Indiana/Indianapolis:20260805T162500
+DTEND;TZID=America/Chicago:20260805T164800
+SUMMARY:✈️ UA 2680  Indianapolis → Chicago
+LOCATION:Indianapolis Airport (IND)\, Terminal 1
+DESCRIPTION:United confirmation DEYV8D. Seats 23C & 23B. Lands Chicago O'Ha
+ re (ORD) 4:48 PM local.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✈️ UA 2680  Indianapolis → Chicago
+TRIGGER:-PT120M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-02@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=America/Chicago:20260805T181500
+DTEND;TZID=Europe/London:20260806T083000
+SUMMARY:✈️ UA 920  Chicago → London Heathrow (overnight)
+LOCATION:Chicago O'Hare (ORD)
+DESCRIPTION:United confirmation DEYV8D. Seats 33D & 33E. Overnight transatl
+ antic – lands Heathrow Terminal 2 at 8:30 AM Thu. Try to sleep.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✈️ UA 920  Chicago → London Heathrow (overnight)
+TRIGGER:-PT90M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-03@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260806T100000
+DTEND;TZID=Europe/London:20260806T103000
+SUMMARY:Cab to the hotel
+LOCATION:Heathrow Terminal 2 → Sea Containers London
+DESCRIPTION:After landing\, immigration and bags. Black cab or pre-booked c
+ ar to the hotel\, ~45–60 min into town.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-04@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260806T110000
+DTEND;TZID=Europe/London:20260806T113000
+SUMMARY:Check in – Sea Containers London
+LOCATION:Sea Containers London\, 20 Upper Ground\, SE1 9PD
+DESCRIPTION:Hotel confirmation 9101804558766. Drop bags even if the room is
+ n't ready.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-05@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260806T113000
+DTEND;TZID=Europe/London:20260806T143000
+SUMMARY:Nap (alarm 2:30 PM)
+LOCATION:Sea Containers London
+DESCRIPTION:Set an alarm for 2:30 PM. A real sleep beats fighting the jet l
+ ag – don't skip it.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-06@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260806T150000
+DTEND;TZID=Europe/London:20260806T160000
+SUMMARY:Gentle first outing – Tate Turbine Hall / Members Bar\, or an hou
+ r at Borough Market
+LOCATION:Tate Modern or Borough Market\, SE1
+DESCRIPTION:Easy option: wander the Turbine Hall and the Members Bar next d
+ oor. Or take a cab (5–10 min\, £7–10) to Borough Market for a gentle 
+ hour – Kappacasein toastie\, a coffee\, a look around.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-07@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260806T190000
+DTEND;TZID=Europe/London:20260806T203000
+SUMMARY:Early dinner
+LOCATION:Sea Containers Restaurant or Gourmet Pizza Co\, SE1
+DESCRIPTION:Keep it close to the hotel and early. Bed as soon as you're tir
+ ed.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-08@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260807T090000
+DTEND;TZID=Europe/London:20260807T100000
+SUMMARY:Breakfast
+LOCATION:Sea Containers London
+DESCRIPTION:Slow start.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-09@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260807T100000
+DTEND;TZID=Europe/London:20260807T120000
+SUMMARY:Frida Kahlo – Tate Modern
+LOCATION:Tate Modern\, Bankside\, SE1 9TG
+DESCRIPTION:The headline show. Take it slowly\; the Members Bar is there wh
+ en you need a sit-down.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-10@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260807T120000
+DTEND;TZID=Europe/London:20260807T124500
+SUMMARY:Break – Members Bar
+LOCATION:Tate Modern Members Bar
+DESCRIPTION:Coffee and a rest before the next rooms.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-11@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260807T134500
+DTEND;TZID=Europe/London:20260807T150000
+SUMMARY:Tracey Emin – Tate Modern
+LOCATION:Tate Modern\, Bankside\, SE1 9TG
+DESCRIPTION:About 75 minutes.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-12@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260807T151500
+DTEND;TZID=Europe/London:20260807T161500
+SUMMARY:Ana Mendieta – Tate Modern
+LOCATION:Tate Modern\, Bankside\, SE1 9TG
+DESCRIPTION:About an hour\, then head back.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-13@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260807T163000
+DTEND;TZID=Europe/London:20260807T180000
+SUMMARY:Back to the room to rest before the show
+LOCATION:Sea Containers London
+DESCRIPTION:Put your feet up before the evening out.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-14@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260807T183000
+DTEND;TZID=Europe/London:20260807T190000
+SUMMARY:Cab to Trafalgar Theatre
+LOCATION:Sea Containers → Trafalgar Theatre\, 14 Whitehall\, SW1A 2DY
+DESCRIPTION:Leave in good time\; allow for evening traffic.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-15@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260807T193000
+DTEND;TZID=Europe/London:20260807T205000
+SUMMARY:🎭 Oh\, Mary!  – Trafalgar Theatre
+LOCATION:Trafalgar Theatre\, 14 Whitehall\, SW1A 2DY
+DESCRIPTION:ATG order 40782078. Dress Circle\, Row J\, seats 1 & 2. About 8
+ 0 minutes\, no interval. eTickets are the PDF on the order – save it off
+ line.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🎭 Oh\, Mary!  – Trafalgar Theatre
+TRIGGER:-PT45M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-16@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260807T210000
+DTEND;TZID=Europe/London:20260807T223000
+SUMMARY:Optional late supper
+LOCATION:Padella Soho or The Old Shades\, SW1
+DESCRIPTION:Only if you're up for it – otherwise straight home.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-17@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260807T223000
+DTEND;TZID=Europe/London:20260807T230000
+SUMMARY:Cab home
+LOCATION:→ Sea Containers London
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-18@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260808T084500
+DTEND;TZID=Europe/London:20260808T093000
+SUMMARY:Breakfast\, then cab to St Pancras
+LOCATION:Sea Containers → St Pancras International\, N1C 4QP
+DESCRIPTION:Leave the hotel by 9:30 for the booked 10:20 departure. Board e
+ arly.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-19@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260808T102000
+DTEND;TZID=Europe/London:20260808T120000
+SUMMARY:🚆 Train  St Pancras → Margate (booked)
+LOCATION:St Pancras International\, N1C 4QP
+DESCRIPTION:Southeastern\, direct via HS1\, arriving Margate 12:00 (1 hr 40
+  min). Booked – but no seat reservation on this ticket\, so sit in any f
+ ree seat in your class.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚆 Train  St Pancras → Margate (booked)
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-20@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260808T121500
+DTEND;TZID=Europe/London:20260808T134500
+SUMMARY:TEARS – final show\, TKE Studios
+LOCATION:TKE Studios\, Margate
+DESCRIPTION:Taxi from Margate station to the studios. About 90 minutes.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-21@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260808T134500
+DTEND;TZID=Europe/London:20260808T151500
+SUMMARY:Lunch – GB Pizza Co
+LOCATION:Great British Pizza Co\, Margate seafront
+DESCRIPTION:On the seafront.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-22@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260808T151500
+DTEND;TZID=Europe/London:20260808T163000
+SUMMARY:Optional – Turner Contemporary
+LOCATION:Turner Contemporary\, Margate CT9 1HG
+DESCRIPTION:Free entry\, right on the front. Only if you've got the energy.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-23@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260808T170000
+DTEND;TZID=Europe/London:20260808T184000
+SUMMARY:🚆 Train back to London (open return)
+LOCATION:Margate station
+DESCRIPTION:Open return – valid on any train all weekend\, so catch which
+ ever one suits. ~5:00 PM is a good target.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-24@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260809T103000
+DTEND;TZID=Europe/London:20260809T111500
+SUMMARY:Cab to the Freud Museum
+LOCATION:Sea Containers → Freud Museum\, 20 Maresfield Gardens\, NW3 5SX
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-25@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260809T111500
+DTEND;TZID=Europe/London:20260809T123000
+SUMMARY:Freud Museum
+LOCATION:Freud Museum\, 20 Maresfield Gardens\, NW3 5SX
+DESCRIPTION:Freud's couch. About 75 minutes.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-26@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260809T124500
+DTEND;TZID=Europe/London:20260809T143000
+SUMMARY:Lunch – Bancone
+LOCATION:Bancone\, Kensington
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-27@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260809T143000
+DTEND;TZID=Europe/London:20260809T154500
+SUMMARY:Cecily Brown – Serpentine South
+LOCATION:Serpentine South\, Kensington Gardens\, W2 3XA
+DESCRIPTION:About 75 minutes.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-28@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260809T163000
+DTEND;TZID=Europe/London:20260809T180000
+SUMMARY:Back to the hotel and pack
+LOCATION:Sea Containers London
+DESCRIPTION:Pack tonight so the morning is easy.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-29@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260809T193000
+DTEND;TZID=Europe/London:20260809T213000
+SUMMARY:Last dinner – Lyaness
+LOCATION:Lyaness\, Sea Containers London
+DESCRIPTION:Downstairs at the hotel. A good last night.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-30@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260810T060000
+DTEND;TZID=Europe/London:20260810T063000
+SUMMARY:Wake up
+LOCATION:Sea Containers London
+DESCRIPTION:Out the door by 6:45.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Wake up
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-31@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260810T064500
+DTEND;TZID=Europe/London:20260810T080000
+SUMMARY:Car to Heathrow Terminal 2
+LOCATION:Sea Containers → Heathrow Terminal 2
+DESCRIPTION:The flight leaves at 11:05 AM – the hotel's checkout timing i
+ s not the constraint\, the flight is. Go early.
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-32@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/London:20260810T110500
+DTEND;TZID=America/Chicago:20260810T141000
+SUMMARY:✈️ UA 959  London Heathrow → Chicago
+LOCATION:Heathrow Terminal 2
+DESCRIPTION:United confirmation DEYV8D. Seats 34D & 34E. Lands O'Hare 2:10 
+ PM local – clear US immigration and customs at ORD.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✈️ UA 959  London Heathrow → Chicago
+TRIGGER:-PT90M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:london2026-33@jonmooreai.github.io
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=America/Chicago:20260810T153500
+DTEND;TZID=America/Indiana/Indianapolis:20260810T175200
+SUMMARY:✈️ UA 5985  Chicago → Indianapolis
+LOCATION:Chicago O'Hare (ORD)
+DESCRIPTION:United confirmation DEYV8D. Seats 11A & 11B. Home 5:52 PM local
+ . Only ~85 min between landing and this departure – keep moving at ORD.
+END:VEVENT
+END:VCALENDAR
