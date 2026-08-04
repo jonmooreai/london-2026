@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>London &middot; Aug 5-10, 2026</title>
+<style>
+  :root{
+    --navy:#0b2540;
+    --navy-deep:#071a2e;
+    --gold:#c9a15e;
+    --gold-soft:#fbf3e4;
+    --cream:#f7f3ec;
+    --paper:#ffffff;
+    --line:#e4ddd0;
+    --line-soft:#efe9de;
+    --text:#22303f;
+    --muted:#6b7785;
+    --green:#2f6b45;
+    --green-bg:#eef4ee;
+    --amber:#8a5a12;
+    --amber-bg:#fdf4e3;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    line-height:1.55;
+  }
+  a{color:var(--navy);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%);
+    color:#fff;
+    padding:64px 24px 52px;
+    text-align:center;
+  }
+  .eyebrow{letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:var(--gold);margin-bottom:14px;}
+  h1{font-size:clamp(34px,7vw,58px);margin:0 0 8px;font-weight:600;letter-spacing:-0.015em;}
+  .dates{font-size:17px;color:#cdd8e3;margin-bottom:10px;}
+  .who{font-size:14px;color:#8fa2b5;margin-bottom:26px;}
+  .lede{max-width:540px;margin:0 auto 26px;font-size:15px;color:#cdd8e3;line-height:1.6;}
+  .countdown{
+    display:inline-flex;gap:22px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:14px;padding:16px 26px;
+  }
+  .countdown div{text-align:center;}
+  .countdown .num{
+    font-size:26px;font-weight:700;color:#fff;line-height:1.1;
+    font-variant-numeric:tabular-nums;font-feature-settings:"tnum";
+    min-width:2ch;
+  }
+  @media(max-width:480px){
+    .countdown{gap:14px;padding:14px 16px;}
+    .countdown .num{font-size:22px;}
+  }
+  .countdown .label{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#a9b7c6;margin-top:3px;}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky;top:0;z-index:20;
+    background:rgba(247,243,236,.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    padding:10px 16px;
+    display:flex;gap:6px;justify-content:center;flex-wrap:wrap;
+  }
+  .nav a{
+    font-size:12px;font-weight:600;text-decoration:none;color:var(--navy);
+    padding:6px 13px;border-radius:999px;border:1px solid transparent;
+    white-space:nowrap;
+  }
+  .nav a:hover{background:#fff;border-color:var(--line);}
+
+  .wrap{max-width:940px;margin:0 auto;padding:0 20px 90px;}
+  .section{margin-top:52px;}
+  .section > h2{
+    font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);
+    margin:0 0 18px;display:flex;align-items:center;gap:12px;
+  }
+  .section > h2::after{content:"";flex:1;height:1px;background:var(--line);}
+
+  .card{
+    background:var(--paper);border:1px solid var(--line);border-radius:16px;
+    padding:26px 28px;box-shadow:0 1px 3px rgba(15,30,50,.04);
+  }
+  .card + .card{margin-top:16px;}
+
+  /* ---------- DAY CARDS ---------- */
+  .day{
+    background:var(--paper);border:1px solid var(--line);border-radius:18px;
+    overflow:hidden;margin-bottom:22px;box-shadow:0 1px 3px rgba(15,30,50,.04);
+  }
+  .day-head{
+    background:var(--navy);color:#fff;padding:20px 28px;
+    display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .day-head .dnum{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);}
+  .day-head .dtitle{font-size:22px;font-weight:600;margin-top:2px;}
+  .day-head .dtag{
+    font-size:11px;background:rgba(201,161,94,.18);color:var(--gold);
+    border:1px solid rgba(201,161,94,.4);padding:5px 12px;border-radius:999px;
+    letter-spacing:.05em;text-transform:uppercase;font-weight:600;
+  }
+  .day-body{padding:8px 28px 26px;}
+
+  .item{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line-soft);}
+  .item:last-child{border-bottom:none;}
+  .item .t{
+    flex:0 0 96px;font-size:13px;font-weight:700;color:var(--navy);
+    padding-top:2px;letter-spacing:.01em;
+  }
+  .item .c{flex:1;min-width:0;}
+  .item .c .h{font-size:16px;font-weight:650;color:var(--text);margin-bottom:3px;}
+  .item .c .s{font-size:14px;color:var(--muted);}
+  .item .c .s strong{color:var(--text);font-weight:600;}
+
+  /* ---------- GENERIC ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px;}
+  .grid .label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:3px;}
+  .grid .value{font-size:15px;font-weight:650;color:var(--text);line-height:1.35;}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  .chip{
+    font-size:12.5px;background:var(--cream);border:1px solid var(--line);
+    padding:5px 13px;border-radius:999px;color:var(--text);
+  }
+
+  /* flights */
+  .fg{margin-bottom:24px;}
+  .fg:last-child{margin-bottom:0;}
+  .fg-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:8px;}
+  .leg{display:grid;grid-template-columns:1fr auto 1fr auto;align-items:center;gap:16px;padding:15px 0;border-top:1px solid var(--line-soft);}
+  .fg .leg:first-of-type{border-top:none;}
+  .leg .code{font-size:20px;font-weight:700;color:var(--navy);}
+  .leg .city{font-size:12.5px;color:var(--muted);}
+  .leg .time{font-size:14px;margin-top:2px;}
+  .leg .date{font-size:11.5px;color:var(--muted);}
+  .leg .arrow{color:var(--gold);font-size:17px;}
+  .leg .meta{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.45;}
+  .leg .meta .flt{color:var(--navy);font-weight:700;font-size:13.5px;}
+
+  .footer{text-align:center;padding:36px 24px 70px;color:var(--muted);font-size:12.5px;line-height:1.8;}
+
+  @media(max-width:620px){
+    .item{flex-direction:column;gap:4px;}
+    .item .t{flex:none;}
+    .leg{grid-template-columns:1fr auto 1fr;gap:10px;}
+    .leg .meta{grid-column:1 / -1;text-align:left;padding-top:4px;}
+    .day-body,.day-head{padding-left:20px;padding-right:20px;}
+    .card{padding:22px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="eyebrow">Our Trip</div>
+  <h1>London</h1>
+  <div class="dates">Wednesday, August 5 - Monday, August 10, 2026</div>
+  <div class="who">Jon &amp; Kadi</div>
+  <div class="lede">
+    A few days in London - galleries, a West End show, and a day trip to the seaside at Margate.
+    Here's roughly what we're up to each day, and how to reach us.
+  </div>
+  <div class="countdown" id="countdown">
+    <div><div class="num" id="cd-days">-</div><div class="label">Days</div></div>
+    <div><div class="num" id="cd-hours">-</div><div class="label">Hours</div></div>
+    <div><div class="num" id="cd-mins">-</div><div class="label">Mins</div></div>
+    <div><div class="num" id="cd-secs">-</div><div class="label">Secs</div></div>
+  </div>
+</div>
+
+<div class="nav">
+  <a href="#wed">Wed 5</a>
+  <a href="#thu">Thu 6</a>
+  <a href="#fri">Fri 7</a>
+  <a href="#sat">Sat 8</a>
+  <a href="#sun">Sun 9</a>
+  <a href="#mon">Mon 10</a>
+  <a href="#flights">Flights</a>
+  <a href="#hotel">Where We're Staying</a>
+</div>
+
+<div class="wrap">
+
+  <!-- ================= THE DAYS ================= -->
+  <div class="section" id="wed" style="margin-top:44px;">
+    <h2>The Days</h2>
+
+    <div class="day">
+      <div class="day-head">
+        <div>
+          <div class="dnum">Day One &middot; Wednesday, August 5</div>
+          <div class="dtitle">Fly to London</div>
+        </div>
+        <div class="dtag">Travel</div>
+      </div>
+      <div class="day-body">
+        <div class="item">
+          <div class="t">4:25 PM</div>
+          <div class="c">
+            <div class="h">Leave Indianapolis</div>
+            <div class="s">A short hop to Chicago, then the overnight flight across to London.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">Overnight</div>
+          <div class="c">
+            <div class="h">Chicago to London, in the air</div>
+            <div class="s">Wheels up from Chicago at 6:15 PM, landing at Heathrow on Thursday morning.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= THURSDAY ================= -->
+    <div class="day" id="thu">
+      <div class="day-head">
+        <div>
+          <div class="dnum">Day Two &middot; Thursday, August 6</div>
+          <div class="dtitle">Arrive in London</div>
+        </div>
+        <div class="dtag">Rest Day</div>
+      </div>
+      <div class="day-body">
+        <div class="item">
+          <div class="t">8:30 AM</div>
+          <div class="c">
+            <div class="h">Land at Heathrow</div>
+            <div class="s">Through the airport and into town to the hotel on the South Bank.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">Late morning</div>
+          <div class="c">
+            <div class="h">Check in at Sea Containers London</div>
+            <div class="s">On the river, right by Tate Modern. The room's ready when we arrive.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">Afternoon</div>
+          <div class="c">
+            <div class="h">Rest, and a gentle look around</div>
+            <div class="s">A nap after the red-eye, then maybe a wander next door to Tate Modern or along the river.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">Evening</div>
+          <div class="c">
+            <div class="h">An easy dinner near the hotel</div>
+            <div class="s">Nothing far - an early night after a long day of travel.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= FRIDAY ================= -->
+    <div class="day" id="fri">
+      <div class="day-head">
+        <div>
+          <div class="dnum">Day Three &middot; Friday, August 7</div>
+          <div class="dtitle">Tate Modern &amp; a West End show</div>
+        </div>
+        <div class="dtag">Big Day</div>
+      </div>
+      <div class="day-body">
+        <div class="item">
+          <div class="t">Morning</div>
+          <div class="c">
+            <div class="h">Frida Kahlo at Tate Modern</div>
+            <div class="s">The big Frida Kahlo exhibition - the headline show of the year - first thing before the crowds.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">Afternoon</div>
+          <div class="c">
+            <div class="h">Tracey Emin &amp; Ana Mendieta</div>
+            <div class="s">Two more exhibitions at Tate Modern, with a proper break in between.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">7:30 PM</div>
+          <div class="c">
+            <div class="h">"Oh, Mary!" at the Trafalgar Theatre</div>
+            <div class="s">The comedy on Whitehall - about 80 minutes, no interval.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">After</div>
+          <div class="c">
+            <div class="h">A late supper in the West End</div>
+            <div class="s">Somewhere for pasta on the way home.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SATURDAY ================= -->
+    <div class="day" id="sat">
+      <div class="day-head">
+        <div>
+          <div class="dnum">Day Four &middot; Saturday, August 8</div>
+          <div class="dtitle">Day trip to Margate</div>
+        </div>
+        <div class="dtag">Day Trip</div>
+      </div>
+      <div class="day-body">
+        <div class="item">
+          <div class="t">10:20 AM</div>
+          <div class="c">
+            <div class="h">Train to the seaside</div>
+            <div class="s">The fast train from St Pancras down to Margate on the Kent coast, arriving around noon.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">Midday</div>
+          <div class="c">
+            <div class="h">TEARS at TKE Studios</div>
+            <div class="s">Tracey Emin's studios in Margate, and the final show of the residency there.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">Afternoon</div>
+          <div class="c">
+            <div class="h">Lunch on the seafront, and a look at Turner Contemporary</div>
+            <div class="s">Pizza by the sea, and the gallery on the front if we fancy it.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">Evening</div>
+          <div class="c">
+            <div class="h">Train back to London</div>
+            <div class="s">Home to the hotel for a quiet dinner after a day out.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SUNDAY ================= -->
+    <div class="day" id="sun">
+      <div class="day-head">
+        <div>
+          <div class="dnum">Day Five &middot; Sunday, August 9</div>
+          <div class="dtitle">Hampstead &amp; Kensington</div>
+        </div>
+        <div class="dtag">Easy Pace</div>
+      </div>
+      <div class="day-body">
+        <div class="item">
+          <div class="t">Late morning</div>
+          <div class="c">
+            <div class="h">The Freud Museum</div>
+            <div class="s">Freud's house in Hampstead, kept as he left it - his study and the famous couch.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">Midday</div>
+          <div class="c">
+            <div class="h">Kenwood House, on Hampstead Heath</div>
+            <div class="s">A grand house at the top of the Heath, free to visit, with works by Rembrandt and Vermeer inside and a lovely view over London.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">Afternoon</div>
+          <div class="c">
+            <div class="h">Lunch in Kensington, then Cecily Brown</div>
+            <div class="s">Fresh pasta, then the Cecily Brown exhibition at the Serpentine gallery in Kensington Gardens.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">Evening</div>
+          <div class="c">
+            <div class="h">Last dinner at the hotel</div>
+            <div class="s">A good final night, and an early one - Monday starts before dawn.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= MONDAY ================= -->
+    <div class="day" id="mon">
+      <div class="day-head">
+        <div>
+          <div class="dnum">Day Six &middot; Monday, August 10</div>
+          <div class="dtitle">Home</div>
+        </div>
+        <div class="dtag">Travel</div>
+      </div>
+      <div class="day-body">
+        <div class="item">
+          <div class="t">Early</div>
+          <div class="c">
+            <div class="h">Car to Heathrow</div>
+            <div class="s">An early start for the morning flight.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">11:05 AM</div>
+          <div class="c">
+            <div class="h">Fly London to Chicago</div>
+            <div class="s">Then the last hop on to Indianapolis.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="t">5:52 PM</div>
+          <div class="c">
+            <div class="h">Home to Indianapolis</div>
+            <div class="s">Back on the ground by early evening, local time.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= FLIGHTS ================= -->
+  <div class="section" id="flights">
+    <h2>Flights</h2>
+    <div class="card">
+      <div class="fg" style="margin-top:0;">
+        <div class="fg-label">Out - Wednesday, August 5</div>
+        <div class="leg">
+          <div><div class="code">IND</div><div class="city">Indianapolis</div><div class="time">4:25 PM</div><div class="date">Wed, Aug 5</div></div>
+          <div class="arrow">&#9992;</div>
+          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">4:48 PM</div><div class="date">Wed, Aug 5</div></div>
+          <div class="meta"><div class="flt">UA 2680</div></div>
+        </div>
+        <div class="leg">
+          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">6:15 PM</div><div class="date">Wed, Aug 5</div></div>
+          <div class="arrow">&#9992;</div>
+          <div><div class="code">LHR</div><div class="city">London Heathrow</div><div class="time">8:30 AM</div><div class="date">Thu, Aug 6</div></div>
+          <div class="meta"><div class="flt">UA 920</div>Overnight</div>
+        </div>
+      </div>
+
+      <div class="fg">
+        <div class="fg-label">Home - Monday, August 10</div>
+        <div class="leg">
+          <div><div class="code">LHR</div><div class="city">London Heathrow</div><div class="time">11:05 AM</div><div class="date">Mon, Aug 10</div></div>
+          <div class="arrow">&#9992;</div>
+          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">2:10 PM</div><div class="date">Mon, Aug 10</div></div>
+          <div class="meta"><div class="flt">UA 959</div></div>
+        </div>
+        <div class="leg">
+          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">3:35 PM</div><div class="date">Mon, Aug 10</div></div>
+          <div class="arrow">&#9992;</div>
+          <div><div class="code">IND</div><div class="city">Indianapolis</div><div class="time">5:52 PM</div><div class="date">Mon, Aug 10</div></div>
+          <div class="meta"><div class="flt">UA 5985</div></div>
+        </div>
+      </div>
+
+      <div class="chips">
+        <span class="chip">United Airlines</span>
+        <span class="chip">Heathrow Terminal 2</span>
+        <span class="chip">All times local</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HOTEL ================= -->
+  <div class="section" id="hotel">
+    <h2>Where We're Staying</h2>
+    <div class="card">
+      <div style="font-size:20px;font-weight:700;color:var(--navy);">Sea Containers London</div>
+      <div style="color:var(--muted);font-size:14px;margin-bottom:18px;">20 Upper Ground, London SE1 9PD &nbsp;&middot;&nbsp; +44 20 3747 1000</div>
+      <div class="grid" style="margin-top:4px;">
+        <div><div class="label">Arrive</div><div class="value">Thu, Aug 6 &middot; morning</div></div>
+        <div><div class="label">Leave</div><div class="value">Mon, Aug 10 &middot; early</div></div>
+        <div><div class="label">Where</div><div class="value">South Bank<br><span style="font-weight:400;color:var(--muted);font-size:13px;">on the river, by Tate Modern</span></div></div>
+      </div>
+      <div class="chips">
+        <span class="chip">Best way to reach us in an emergency</span>
+        <span class="chip">Ask for Jon Moore's room</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    See you when we're home. &#128075;
+  </div>
+
+</div>
+
+<script>
+  const tripStart = new Date("2026-08-05T16:25:00-04:00");
+  function updateCountdown(){
+    const now = new Date();
+    const diff = tripStart - now;
+    const el = document.getElementById('countdown');
+    if(diff <= 0){
+      el.innerHTML = '<div style="font-size:17px;font-weight:600;padding:4px 8px;">Off to London - see you soon.</div>';
+      return;
+    }
+    const pad = n => String(n).padStart(2, '0');
+    document.getElementById('cd-days').textContent  = Math.floor(diff / 86400000);
+    document.getElementById('cd-hours').textContent = pad(Math.floor((diff / 3600000) % 24));
+    document.getElementById('cd-mins').textContent  = pad(Math.floor((diff / 60000) % 60));
+    document.getElementById('cd-secs').textContent  = pad(Math.floor((diff / 1000) % 60));
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
