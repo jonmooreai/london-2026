@@ -116,6 +116,7 @@
     flex:0 0 96px;font-size:13px;font-weight:700;color:var(--navy);
     padding-top:2px;letter-spacing:.01em;
   }
+  .item .t small{display:block;font-weight:500;color:var(--muted);font-size:11px;letter-spacing:0;margin-top:1px;}
   .item .c{flex:1;min-width:0;}
   .item .c .h{font-size:16px;font-weight:650;color:var(--text);margin-bottom:3px;}
   .item .c .s{font-size:14px;color:var(--muted);}
@@ -141,7 +142,8 @@
   .leg .code{font-size:20px;font-weight:700;color:var(--navy);}
   .leg .city{font-size:12.5px;color:var(--muted);}
   .leg .time{font-size:14px;margin-top:2px;}
-  .leg .date{font-size:11.5px;color:var(--muted);}
+  .leg .time2{font-size:11px;color:var(--muted);margin-top:2px;line-height:1.4;}
+  .leg .date{font-size:11.5px;color:var(--muted);margin-top:2px;}
   .leg .arrow{color:var(--gold);font-size:17px;}
   .leg .meta{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.45;}
   .leg .meta .flt{color:var(--navy);font-weight:700;font-size:13.5px;}
@@ -204,7 +206,7 @@
       </div>
       <div class="day-body">
         <div class="item">
-          <div class="t">4:25 PM</div>
+          <div class="t">4:25 PM ET<small>9:25 PM London</small></div>
           <div class="c">
             <div class="h">Leave Indianapolis</div>
             <div class="s">A short hop to Chicago, then the overnight flight across to London.</div>
@@ -214,7 +216,7 @@
           <div class="t">Overnight</div>
           <div class="c">
             <div class="h">Chicago to London, in the air</div>
-            <div class="s">Wheels up from Chicago at 6:15 PM, landing at Heathrow on Thursday morning.</div>
+            <div class="s">Wheels up from Chicago at 6:15 PM Central (7:15 PM ET), landing at Heathrow on Thursday morning.</div>
           </div>
         </div>
       </div>
@@ -231,7 +233,7 @@
       </div>
       <div class="day-body">
         <div class="item">
-          <div class="t">8:30 AM</div>
+          <div class="t">8:30 AM London<small>3:30 AM ET</small></div>
           <div class="c">
             <div class="h">Land at Heathrow</div>
             <div class="s">Through the airport and into town to the hotel on the South Bank.</div>
@@ -286,7 +288,7 @@
           </div>
         </div>
         <div class="item">
-          <div class="t">7:30 PM</div>
+          <div class="t">7:30 PM London<small>2:30 PM ET</small></div>
           <div class="c">
             <div class="h">"Oh, Mary!" at the Trafalgar Theatre</div>
             <div class="s">The comedy on Whitehall - about 80 minutes, no interval.</div>
@@ -313,7 +315,7 @@
       </div>
       <div class="day-body">
         <div class="item">
-          <div class="t">10:20 AM</div>
+          <div class="t">10:20 AM London<small>5:20 AM ET</small></div>
           <div class="c">
             <div class="h">Train to the seaside</div>
             <div class="s">The fast train from St Pancras down to Margate on the Kent coast, arriving around noon.</div>
@@ -402,17 +404,17 @@
           </div>
         </div>
         <div class="item">
-          <div class="t">11:05 AM</div>
+          <div class="t">11:05 AM London<small>6:05 AM ET</small></div>
           <div class="c">
             <div class="h">Fly London to Chicago</div>
             <div class="s">Then the last hop on to Indianapolis.</div>
           </div>
         </div>
         <div class="item">
-          <div class="t">5:52 PM</div>
+          <div class="t">5:52 PM ET<small>10:52 PM London</small></div>
           <div class="c">
             <div class="h">Home to Indianapolis</div>
-            <div class="s">Back on the ground by early evening, local time.</div>
+            <div class="s">Back on the ground by early evening, our time.</div>
           </div>
         </div>
       </div>
@@ -427,15 +429,15 @@
       <div class="fg" style="margin-top:0;">
         <div class="fg-label">Out - Wednesday, August 5</div>
         <div class="leg">
-          <div><div class="code">IND</div><div class="city">Indianapolis</div><div class="time">4:25 PM</div><div class="date">Wed, Aug 5</div></div>
+          <div><div class="code">IND</div><div class="city">Indianapolis</div><div class="time">4:25 PM</div><div class="time2">9:25 PM London &middot; 4:25 PM ET</div><div class="date">Wed, Aug 5</div></div>
           <div class="arrow">&#9992;</div>
-          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">4:48 PM</div><div class="date">Wed, Aug 5</div></div>
+          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">4:48 PM</div><div class="time2">10:48 PM London &middot; 5:48 PM ET</div><div class="date">Wed, Aug 5</div></div>
           <div class="meta"><div class="flt">UA 2680</div></div>
         </div>
         <div class="leg">
-          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">6:15 PM</div><div class="date">Wed, Aug 5</div></div>
+          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">6:15 PM</div><div class="time2">12:15 AM London &middot; 7:15 PM ET</div><div class="date">Wed, Aug 5</div></div>
           <div class="arrow">&#9992;</div>
-          <div><div class="code">LHR</div><div class="city">London Heathrow</div><div class="time">8:30 AM</div><div class="date">Thu, Aug 6</div></div>
+          <div><div class="code">LHR</div><div class="city">London Heathrow</div><div class="time">8:30 AM</div><div class="time2">8:30 AM London &middot; 3:30 AM ET</div><div class="date">Thu, Aug 6</div></div>
           <div class="meta"><div class="flt">UA 920</div>Overnight</div>
         </div>
       </div>
@@ -443,15 +445,15 @@
       <div class="fg">
         <div class="fg-label">Home - Monday, August 10</div>
         <div class="leg">
-          <div><div class="code">LHR</div><div class="city">London Heathrow</div><div class="time">11:05 AM</div><div class="date">Mon, Aug 10</div></div>
+          <div><div class="code">LHR</div><div class="city">London Heathrow</div><div class="time">11:05 AM</div><div class="time2">11:05 AM London &middot; 6:05 AM ET</div><div class="date">Mon, Aug 10</div></div>
           <div class="arrow">&#9992;</div>
-          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">2:10 PM</div><div class="date">Mon, Aug 10</div></div>
+          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">2:10 PM</div><div class="time2">8:10 PM London &middot; 3:10 PM ET</div><div class="date">Mon, Aug 10</div></div>
           <div class="meta"><div class="flt">UA 959</div></div>
         </div>
         <div class="leg">
-          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">3:35 PM</div><div class="date">Mon, Aug 10</div></div>
+          <div><div class="code">ORD</div><div class="city">Chicago</div><div class="time">3:35 PM</div><div class="time2">9:35 PM London &middot; 4:35 PM ET</div><div class="date">Mon, Aug 10</div></div>
           <div class="arrow">&#9992;</div>
-          <div><div class="code">IND</div><div class="city">Indianapolis</div><div class="time">5:52 PM</div><div class="date">Mon, Aug 10</div></div>
+          <div><div class="code">IND</div><div class="city">Indianapolis</div><div class="time">5:52 PM</div><div class="time2">10:52 PM London &middot; 5:52 PM ET</div><div class="date">Mon, Aug 10</div></div>
           <div class="meta"><div class="flt">UA 5985</div></div>
         </div>
       </div>
@@ -459,8 +461,12 @@
       <div class="chips">
         <span class="chip">United Airlines</span>
         <span class="chip">Heathrow Terminal 2</span>
-        <span class="chip">All times local</span>
       </div>
+      <p style="font-size:12.5px;color:var(--muted);margin:16px 0 0;">
+        The big time by each airport is that city's own clock. Underneath, the same moment in
+        <strong>London</strong> and back home in <strong>Eastern (ET)</strong> - in August the two are
+        <strong>5 hours apart</strong> (London ahead).
+      </p>
     </div>
   </div>
 
